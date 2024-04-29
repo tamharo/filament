@@ -60,10 +60,7 @@ Hooks may be used to execute code at various points within the select's lifecycl
 
 ```php
 SelectColumn::make()
-    ->beforeStateUpdated(function ($record, $state) {
+    ->updateStateUsing(function ($record, $state) {
         // Runs before the state is saved to the database.
-    })
-    ->afterStateUpdated(function ($record, $state) {
-        // Runs after the state is saved to the database.
     })
 ```
