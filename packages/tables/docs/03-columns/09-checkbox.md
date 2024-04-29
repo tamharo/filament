@@ -21,10 +21,7 @@ Hooks may be used to execute code at various points within the checkbox's lifecy
 
 ```php
 CheckboxColumn::make()
-    ->beforeStateUpdated(function ($record, $state) {
+    ->updateStateUsing(function ($record, $state) {
         // Runs before the state is saved to the database.
-    })
-    ->afterStateUpdated(function ($record, $state) {
-        // Runs after the state is saved to the database.
     })
 ```
